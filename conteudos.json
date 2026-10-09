@@ -45,6 +45,19 @@
       ]
     },
     {
+      "titulo": "O que é Thought Leadership?",
+      "categoria": "blog-seo-geo",
+      "url": "https://xcom.net.br/o-que-e-thought-leadership/",
+      "veiculo": "Blog",
+      "cliente": "XCOM by Atrevia",
+      "data": "2024",
+      "descricao": "Artigo sobre Thought Leadership no âmbito dos negócios digitais e como ele pode agregar valor à marca.",
+      "tags": [
+        "thought leadership",
+        "linkedin"
+      ]
+    },
+    {
       "titulo": "Ted Lasso e a fortaleza de vidro",
       "categoria": "linkedin-artigos",
       "url": "https://pt.linkedin.com/pulse/ted-lasso-e-fortaleza-de-vidro-diego-betioli",
@@ -158,19 +171,6 @@
       "tags": [
         "editoria",
         "cultura pop"
-      ]
-    },
-    {
-      "titulo": "O que é Thought Leadership?",
-      "categoria": "blog-seo-geo",
-      "url": "https://xcom.net.br/o-que-e-thought-leadership/",
-      "veiculo": "Blog",
-      "cliente": "XCOM by Atrevia",
-      "data": "2024",
-      "descricao": "Artigo sobre Thought Leadership no âmbito dos negócios digitais e como ele pode agregar valor à marca.",
-      "tags": [
-        "thought leadership",
-        "linkedin"
       ]
     }
   ],
