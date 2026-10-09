@@ -141,6 +141,15 @@
       ]
     },
     {
+      "titulo": "O que é FDE (Forward Deployed Engineering) em IA e como funciona?",
+      "categoria": "blog-seo-geo",
+      "url": "https://www.stalse.com/blog/o-que-e-fde-em-ia",
+      "veiculo": "Blog",
+      "cliente": "Stalse Analytics",
+      "data": "2026",
+      "descricao": "Artigo técnico sobre FDE em IA"
+    },
+    {
       "titulo": "Meta Galáxia",
       "categoria": "outros",
       "url": "https://metagalaxia.com.br/",
@@ -150,8 +159,7 @@
         "editoria",
         "cultura pop"
       ]
-    },
-    {}
+    }
   ],
   "perfil": {
     "nome": "Diego Betioli",
