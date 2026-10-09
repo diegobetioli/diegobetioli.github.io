@@ -177,6 +177,24 @@
       ]
     },
     {
+      "titulo": "Atlantic Energias Renováveis - Vídeo Institucional",
+      "categoria": "roteiros-video",
+      "url": "https://www.youtube.com/watch?v=Nbr2HK-CIrg&list=PLXc7w0LVXNOt5Q-pRtb5l8PBcvc-zkWST&index=3",
+      "veiculo": "YouTube",
+      "cliente": "Atlantic Energias - CGN",
+      "data": "2019",
+      "descricao": "Roteiro de vídeo institucional para a Atlantic Energias, atual CGN."
+    },
+    {
+      "titulo": "Filmes de terror que marcaram a infância",
+      "categoria": "roteiros-video",
+      "url": "https://www.youtube.com/watch?v=AbqQrDjBd0g&list=PLXc7w0LVXNOt5Q-pRtb5l8PBcvc-zkWST&index=2",
+      "veiculo": "YouTube",
+      "cliente": "Meta Galáxia",
+      "data": "2018",
+      "descricao": "Roteiro de vídeo com indicações de filmes de terror."
+    },
+    {
       "titulo": "A Última Estação",
       "categoria": "outros",
       "url": "https://www.amazon.com.br/%C3%BAltima-esta%C3%A7%C3%A3o-Diego-Betioli-ebook/dp/B087C5PDC9",
