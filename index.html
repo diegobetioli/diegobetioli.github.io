@@ -157,8 +157,10 @@
   .btn.ghost { background: transparent; }
 
   /* ---------- Seções ---------- */
-  main { padding-block: var(--s-6) var(--s-8); display: grid; gap: var(--s-8); }
-  .secao-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s-3) var(--s-6); align-items: end; padding-bottom: var(--s-4); border-bottom: 2px solid var(--ink); margin-bottom: var(--s-5); }
+  main { padding-block: var(--s-6) var(--s-8); display: grid; gap: calc(var(--s-8) + var(--s-4)); }
+  /* A linha forte abre cada categoria: separa o título dos cartões da categoria anterior. */
+  section { border-top: 3px solid var(--ink); padding-top: var(--s-4); }
+  .secao-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s-3) var(--s-6); align-items: start; padding-bottom: var(--s-4); border-bottom: 1px solid var(--line); margin-bottom: var(--s-5); }
   .secao-head h2 { font-size: clamp(1.6rem, 3.6vw, 2.4rem); font-weight: 700; letter-spacing: -.02em; line-height: 1.05; }
   .secao-head p { margin: 0; color: var(--muted); font-size: .95rem; }
   .secao-head .side { display: grid; gap: var(--s-3); justify-items: start; }
