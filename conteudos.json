@@ -144,6 +144,19 @@
       "descricao": "Post sobre números do setor de publicidade e OOH em 2024."
     },
     {
+      "titulo": "Tem Sexta Que É 13",
+      "categoria": "newsletters",
+      "url": "https://temsexta13.substack.com/",
+      "veiculo": "Substack",
+      "cliente": "Diego Betioli",
+      "data": "Desde 2024",
+      "descricao": "Newsletter quinzenal sobre terror na cultura pop.",
+      "tags": [
+        "substack",
+        "newsletter"
+      ]
+    },
+    {
       "titulo": "Instagram @diegobetioli",
       "categoria": "redes-sociais",
       "url": "https://www.instagram.com/diegobetioli/",
