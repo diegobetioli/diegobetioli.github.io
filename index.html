@@ -405,7 +405,15 @@
         if (!e.isIntersecting) return;
         document.querySelectorAll("#cats a").forEach(a => a.classList.toggle("ativo", a.dataset.cat === e.target.id));
         const ativo = document.querySelector(`#cats a[data-cat="${e.target.id}"]`);
-        if (ativo) ativo.scrollIntoView({ block: "nearest", inline: "nearest" });
+        // Rola só a barra de categorias na horizontal; scrollIntoView também moveria a página
+        // e brigaria com a rolagem do visitante.
+        if (ativo) {
+          const barra = $("#cats");
+          const esq = ativo.offsetLeft - barra.offsetLeft;
+          if (esq < barra.scrollLeft || esq + ativo.offsetWidth > barra.scrollLeft + barra.clientWidth) {
+            barra.scrollTo({ left: esq - 16, behavior: "smooth" });
+          }
+        }
       });
     }, { rootMargin: "-30% 0px -60% 0px" });
     document.querySelectorAll("#secoes section").forEach(s => obs.observe(s));
