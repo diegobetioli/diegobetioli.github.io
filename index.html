@@ -22,9 +22,7 @@
   "knowsAbout": ["SEO", "GEO (Generative Engine Optimization)", "Marketing de conteúdo", "Ghostwriting para executivos", "Newsletters", "Roteiros de vídeo", "Literatura de terror e mistério"],
   "sameAs": [
     "https://www.linkedin.com/in/diegobetioli/",
-    "https://www.instagram.com/diegobetioli/",
-    "https://bsky.app/profile/diegobetioli.bsky.social",
-    "https://linktr.ee/diegosbetioli"
+    "https://www.instagram.com/diegobetioli/"
   ]
 }
 </script>
@@ -122,9 +120,6 @@
     padding: .55rem .8rem; border-radius: 999px;
   }
   .profile-links a:hover { border-color: var(--accent); color: var(--accent); }
-  .stats { display: flex; flex-wrap: wrap; gap: var(--s-5); margin-top: var(--s-6); padding-top: var(--s-4); border-top: 1px solid var(--line); }
-  .stat { display: flex; align-items: baseline; gap: var(--s-2); font-family: var(--f-mono); font-size: .8rem; color: var(--muted); }
-  .stat b { font: 700 1.6rem/1 var(--f-display); color: var(--ink); font-variant-numeric: tabular-nums; }
 
   /* ---------- Barra de editorias ---------- */
   .toolbar {
@@ -143,7 +138,6 @@
   }
   .cats a:hover { border-color: var(--line); }
   .cats a.ativo { background: var(--ink); color: var(--paper); }
-  .cats .n { font: 500 .7rem/1 var(--f-mono); opacity: .7; font-variant-numeric: tabular-nums; }
   .search { position: relative; flex: 0 1 15rem; min-width: 9rem; }
   .search input {
     width: 100%; font: 400 .9rem/1 var(--f-mono); color: var(--ink);
@@ -166,7 +160,6 @@
   main { padding-block: var(--s-6) var(--s-8); display: grid; gap: var(--s-8); }
   .secao-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s-3) var(--s-6); align-items: end; padding-bottom: var(--s-4); border-bottom: 2px solid var(--ink); margin-bottom: var(--s-5); }
   .secao-head h2 { font-size: clamp(1.6rem, 3.6vw, 2.4rem); font-weight: 700; letter-spacing: -.02em; line-height: 1.05; }
-  .secao-head .count { display: block; font: 500 .75rem/1.2 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: var(--s-2); }
   .secao-head p { margin: 0; color: var(--muted); font-size: .95rem; }
   .secao-head .side { display: grid; gap: var(--s-3); justify-items: start; }
 
@@ -233,7 +226,6 @@
         <a href="https://www.linkedin.com/in/diegobetioli/" target="_blank" rel="noopener">LinkedIn ↗</a>
       </nav>
     </div>
-    <div class="stats" id="stats"></div>
   </div>
 </header>
 
@@ -360,15 +352,13 @@
     const filtrados = filtrar(itens);
     const buscando = !!$("#busca").value.trim();
     let visiveis = 0;
-    const doTipo = id => itens.filter(i => i.categoria === id);
 
     $("#cats").innerHTML = CATEGORIAS.map(c =>
-      `<a href="#${c.id}" data-cat="${c.id}">${esc(c.nome)} <span class="n">${doTipo(c.id).length}</span></a>`).join("");
+      `<a href="#${c.id}" data-cat="${c.id}">${esc(c.nome)}</a>`).join("");
 
     $("#secoes").innerHTML = CATEGORIAS.map(c => {
       const lista = filtrados.filter(i => i.categoria === c.id)
         .sort((a, b) => String(b.data || "").localeCompare(String(a.data || "")));
-      const total = doTipo(c.id).length;
       if (buscando && !lista.length) return "";
       visiveis += lista.length;
       const corpo = lista.length
@@ -377,7 +367,7 @@
       return `
         <section id="${c.id}" aria-labelledby="h-${c.id}">
           <div class="secao-head">
-            <div><span class="count">${total} ${total === 1 ? "conteúdo" : "conteúdos"}</span><h2 id="h-${c.id}">${esc(c.nome)}</h2></div>
+            <div><h2 id="h-${c.id}">${esc(c.nome)}</h2></div>
             <div class="side"><p>${esc(c.descricao)}</p></div>
           </div>
           ${corpo}
@@ -386,12 +376,6 @@
 
     $("#sem-resultado").hidden = !(buscando && visiveis === 0);
 
-    const artigos = doTipo("blog-seo-geo").length + doTipo("linkedin-artigos").length + doTipo("linkedin-c-level").length;
-    $("#stats").innerHTML = [
-      [itens.length, "conteúdos"],
-      [artigos, "artigos e posts"],
-      [CATEGORIAS.filter(c => doTipo(c.id).length).length, `de ${CATEGORIAS.length} categorias`]
-    ].map(([n, l]) => `<span class="stat"><b>${n}</b>${esc(l)}</span>`).join("");
     observarSecoes();
   }
 

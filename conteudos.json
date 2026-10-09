@@ -13,14 +13,6 @@
       {
         "rotulo": "Instagram",
         "url": "https://www.instagram.com/diegobetioli/"
-      },
-      {
-        "rotulo": "Bluesky",
-        "url": "https://bsky.app/profile/diegobetioli.bsky.social"
-      },
-      {
-        "rotulo": "Linktree",
-        "url": "https://linktr.ee/diegosbetioli"
       }
     ]
   },
@@ -108,26 +100,6 @@
         "literatura"
       ],
       "url": "https://www.instagram.com/diegobetioli/"
-    },
-    {
-      "categoria": "redes-sociais",
-      "titulo": "Bluesky @diegobetioli.bsky.social",
-      "veiculo": "Bluesky",
-      "descricao": "Esporte, entretenimento e bastidores dos livros.",
-      "tags": [
-        "perfil"
-      ],
-      "url": "https://bsky.app/profile/diegobetioli.bsky.social"
-    },
-    {
-      "categoria": "redes-sociais",
-      "titulo": "Linktree",
-      "veiculo": "Linktree",
-      "descricao": "Todos os links em um só lugar.",
-      "tags": [
-        "perfil"
-      ],
-      "url": "https://linktr.ee/diegosbetioli"
     },
     {
       "categoria": "outros",
